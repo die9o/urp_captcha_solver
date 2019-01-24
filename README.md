@@ -2,9 +2,19 @@
 
 用Keras对URP教务验证码的识别训练
 
+![image](./readme_img/sample.jpg)
+
 # 说明
 
 模型及训练集均来源于网上，请勿用于非法用途
+
+# 训练集
+
+来源于网上，具体链接忘记了。大约8W张标记好的训练集,如需要，可以ISSUE里留言
+
+有一种可行的方案是观察验证码的特征，模拟生成。本人水平有限，就不尝试了。
+
+参考项目[https://github.com/JasonLiTW/simple-railway-captcha-solver](https://github.com/JasonLiTW/simple-railway-captcha-solver)
 
 # 模型
 

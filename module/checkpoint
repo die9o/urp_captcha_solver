@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/diego/learn/cnn_test_2/module/crack_captcha.model-3100"
+all_model_checkpoint_paths: "/home/diego/learn/cnn_test_2/module/crack_captcha.model-3100"
