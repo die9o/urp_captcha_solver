@@ -43,7 +43,7 @@ def resize_all_imgs():
         _resize_img(_file)
 
 
-def model_test(num=100):
+def model_test(num=10):
     """
     验证原来项目设计的模型
     :return:
@@ -88,4 +88,6 @@ def model_test(num=100):
     # print('预测结果: {0}/{1}'.format(predict_correct,len(filename_list)))
     clear_session()
     print('识别结束，请到目录pic/test下检查结果')
-model_test()
+
+    
+model_test(10)
