@@ -1,8 +1,16 @@
 # urp_captcha_solver
 
-用Keras对URP教务验证码的识别训练
+用Keras对URP教务验证码的识别训练 
+
+python3环境
 
 ![image](./readme_img/sample.jpg)
+
+# 使用
+```shell
+pip install -r requirements.txt
+python3 model_test.py
+```
 
 # 说明
 
