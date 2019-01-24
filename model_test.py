@@ -48,7 +48,7 @@ def model_test(num=100):
     验证原来项目设计的模型
     :return:
     """
-    print('清空原文件图片')
+    print('清空原文件夹图片 pic/test')
     for img in os.listdir(TEST_IMG_PATH):
         os.remove(TEST_IMG_PATH + os.sep + img)
     download_img(num)
@@ -64,7 +64,7 @@ def model_test(num=100):
     test_data = np.stack([np.array(Image.open(TEST_IMG_PATH + os.sep + img_file +FILE_EXT))/255.0
                           for img_file in filename_list])
     prediction = model6.predict(test_data)
-    ## 这里设计的模型，得到的预测是一个长度4的数组[[0],[1],[2],[3],[4],[5]]
+    ## 这里设计的模型，得到的预测是一个长度4的数组[[0],[1],[2],[3]]
     ##  [0] ：表示第一个数字的预测结果集，每个预测结果为一个数组，长度为36，即[ [len(36)],[len(36)]...]
     ##  对于一个字符的预测结果，因为模型执行过BatchNormalization
     ##  长度36的数组并不是类似的categorical的二进制矩阵结果[0 0 1 0 0 ...]，
@@ -87,6 +87,5 @@ def model_test(num=100):
     #         predict_correct += 1
     # print('预测结果: {0}/{1}'.format(predict_correct,len(filename_list)))
     clear_session()
-
-
+    print('识别结束，请到目录pic/test下检查结果')
 model_test()

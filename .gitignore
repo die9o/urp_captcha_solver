@@ -103,6 +103,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+.idea/
+!pic/test/
+!pic/train/
+
 # data
 *.data
 *.bin
