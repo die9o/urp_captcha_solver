@@ -59,7 +59,7 @@ def categorical(captcha_text):
 
 def batch_generator(data_dict,batch_size=16):
     """
-    这是一个自定义的数据生成器写法，推荐是使用后面那个继承keras.utils.Sequence的写法
+    这是一个自定义的数据生成器写法，推荐是使用后面那个继承keras.utils.Sequence的写法。
     注意总样本数/Batch_size 必须能整除，不然最后一个批次数据的大小跟前面的不一致，从而引发数量不匹配的问题
     TODO:可以考虑加入不整除的丢弃余留的样本。\
     TODO:加入shuffle机制
@@ -150,7 +150,7 @@ class DataGenerator(Sequence):
         return x, [one_char for one_char in np.asarray(y)]
 
 # train_data 是一个字典，记录文件名及对应的label值
-# 这里因为生成的数据文件名及label值，此处显得有些多余，但有些情况生成的数据并非如此
+# 这里因为生成的数据文件名就是label值，此处显得有些多余，但有些情况生成的数据并非如此
 train_data = {}
 for filename in os.listdir(TRAIN_IMG_PATH):
     train_data[filename.split('.')[0]] = filename.split('.')[0]
