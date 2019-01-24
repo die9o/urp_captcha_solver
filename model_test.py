@@ -89,5 +89,5 @@ def model_test(num=10):
     clear_session()
     print('识别结束，请到目录pic/test下检查结果')
 
-    
+
 model_test(10)
