@@ -20,6 +20,7 @@
 
 参考[https://github.com/JasonLiTW/simple-railway-captcha-solver](https://github.com/JasonLiTW/simple-railway-captcha-solver)
 (参考项目是6字符的)
+
 model.summary()
 ```
 __________________________________________________________________________________________________
