@@ -10,7 +10,8 @@ import uuid
 
 MODEL_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),'module')
 TEST_IMG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),'pic','test')
-
+ONLINE_CAPTCHA_URL = 'http://urp.cup.edu.cn/img/captcha.jpg'
+# ONLINE_CAPTCHA_URL ='http://jwxt.imu.edu.cn/img/captcha.jpg'
 CHARSET = '0123456789abcdefghijklmnopqrstuvwxyz'
 CAPTCHA_LEN =4
 FILE_EXT = '.jpg'
@@ -24,7 +25,7 @@ def download_img(num=1):
     """
     print('正在下载图片保存到pic/test:')
     for i in range(num):
-        r = requests.get('http://jwxt.imu.edu.cn/img/captcha.jpg',timeout=10)
+        r = requests.get(ONLINE_CAPTCHA_URL,timeout=10)
         with open(TEST_IMG_PATH + os.sep + '{0}.jpg'.format(uuid.uuid4()),'wb') as f:
             f.write(r.content)
         print('\r 下载进度：{0}/{1}'.format(i+1,num),end='')
