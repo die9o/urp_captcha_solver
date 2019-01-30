@@ -92,4 +92,8 @@ Non-trainable params: 960
 (这里是照搬的图，实际用的时候是4字符的)
 ![image](./readme_img/imitate6.png)
 
+# 改进
+
+可以考虑使用RNN
+[https://github.com/ypwhs/captcha_break](https://github.com/ypwhs/captcha_break)
 
